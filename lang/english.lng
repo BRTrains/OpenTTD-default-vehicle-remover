@@ -1,0 +1,15 @@
+﻿﻿##grflangid 0x01
+
+# GRF name and description
+STR_GRF_NAME                    :Default Vehicle Remover
+STR_GRF_DESC                    :Optionally (by parameter) removes any and all of the default OpenTTD vehicles (trains/monorail/maglev, aircraft, ships, road vehicles. (Does not remove vehicles added by newGRFs)
+
+# Parameters
+STR_PARAM_TRAIN_NAME            :Train remover
+STR_PARAM_TRAIN_DESC            :Disables the OpenTTD default trains/monorail/maglev
+STR_PARAM_AIRCRAFT_NAME         :Aircraft remover
+STR_PARAM_AIRCRAFT_DESC         :Disables the OpenTTD default aircraft
+STR_PARAM_SHIP_NAME             :Ship remover
+STR_PARAM_SHIP_DESC             :Disables the OpenTTD default ships
+STR_PARAM_ROADVEH_NAME          :Road vehicle remover
+STR_PARAM_ROADVEH_DESC          :Disables the OpenTTD default road vehicles

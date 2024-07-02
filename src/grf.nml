@@ -1,0 +1,65 @@
+// GRF definition block
+grf {
+    grfid: "vehs";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    version: 1;
+    min_compatible_version: 1; //bump up this number to version when breaking compatibility
+    param {
+        param_train {
+            type: bool;
+            name: string(STR_PARAM_TRAIN_NAME);
+            desc: string(STR_PARAM_TRAIN_DESC);
+            def_value: 0;
+            bit: 2;
+        }
+    }
+    param {
+        param_aircraft {
+            type: bool;
+            name: string(STR_PARAM_AIRCRAFT_NAME);
+            desc: string(STR_PARAM_AIRCRAFT_DESC);
+            def_value: 0;
+            bit: 2;
+        }
+    }        
+    param {
+        param_ship {
+            type: bool;
+            name: string(STR_PARAM_SHIP_NAME);
+            desc: string(STR_PARAM_SHIP_DESC);
+            def_value: 0;
+            bit: 2;
+        }
+    }    
+    param {
+        param_roadveh {
+            type: bool;
+            name: string(STR_PARAM_ROADVEH_NAME);
+            desc: string(STR_PARAM_ROADVEH_DESC);
+            def_value: 0;
+            bit: 2;
+        }
+    }
+}
+
+if (param_train)
+{
+    disable_item(FEAT_TRAINS, 0, 26);
+    disable_item(FEAT_TRAINS, 54, 115);
+}
+
+if (param_aircraft)	
+{
+    disable_item(FEAT_AIRCRAFT, 0, 39);	
+}
+
+if (param_ship)	
+{
+    disable_item(FEAT_SHIPS, 00, 10);
+}
+
+if (param_roadveh)	
+{
+    disable_item(FEAT_ROADVEHS, 00, 115);
+}
